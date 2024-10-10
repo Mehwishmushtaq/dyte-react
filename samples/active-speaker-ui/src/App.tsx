@@ -9,15 +9,20 @@ function App() {
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
 
-    const authToken = searchParams.get('KuC8eu1geRoeEpr');
+    // Update this line to correctly retrieve the authToken from the URL
+    const authToken = searchParams.get('authToken'); // Change 'authToken' to whatever your token key is
 
+    // If the authToken does not exist, redirect to the URL with the token
     if (!authToken) {
-      alert(
-        "An authToken wasn't passed, please pass an authToken in the URL query to join a meeting."
-      );
+      // Construct the new URL with the authToken
+      const newUrl = `https://dyte-react.vercel.app/?authToken=KuC8eu1geRoeEpr`; // Change this part to your logic for retrieving the token
+
+      // Redirect the user to the new URL
+      window.location.href = newUrl;
       return;
     }
 
+    // If authToken is found, initialize the meeting
     initMeeting({
       authToken,
       defaults: {
