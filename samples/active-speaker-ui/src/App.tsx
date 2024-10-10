@@ -15,7 +15,7 @@ function App() {
     // If the authToken does not exist, redirect to the URL with the token
     if (!authToken) {
       // Construct the new URL with the authToken
-      const newUrl = `https://dyte-react.vercel.app/?authToken=KuC8eu1geRoeEpr`; // Change this part to your logic for retrieving the token
+      const newUrl = `https://dyte-react.vercel.app/?authToken=<your-token>`; // Change this part to your logic for retrieving the token
 
       // Redirect the user to the new URL
       window.location.href = newUrl;
