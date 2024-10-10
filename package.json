@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "workspaces": [
+    "samples/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "format": "prettier -w ."
+  },
+  "devDependencies": {
+    "prettier": "^2.8.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "proseWrap": "always"
+  },
+  "dependencies": {
+    "@dytesdk/react-ui-kit": "^2.0.5",
+    "@dytesdk/react-web-core": "^2.1.4",
+    "clsx": "^2.1.1",
+    "react-draggable": "^4.4.6",
+    "react-feather": "^2.0.10"
+  }
+}
